@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Naveen, UI/UX Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">PortFolio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-solid" style="padding:11px 24px;font-size:14px;">Connect</a>
+      <button class="burger" id="burgerBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Projects</div>
+    <div class="eyebrow">Portfolio</div>
+    <h1>Every project below is a real case study — click through for research, branding, and the tech behind it.</h1>
+  </div>
+</section>
+
+<section class="portfolio" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="filters" id="filters"></div>
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+    <div class="portfolio-cta">
+      <a href="index.html#contact" class="btn btn-solid">Let's Talk</a>
+      <a href="services.html" class="btn btn-outline">See Services</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">PROTOFOLIO.</div>
+      <p class="footer-quote">"Seeking me to continually enhance my portfolio in the future. Open to collaborative opportunities that align with my professional endeavors."</p>
+    </div>
+    <div class="footer-contact">
+      <h6>Contact</h6>
+      <p><a href="tel:+918440090525">+91 8440090525</a></p>
+      <p><a href="mailto:naveensinghchouhan2000@gmail.com">naveensinghchouhan2000@gmail.com</a></p>
+      <p>Jaipur, Rajasthan, India</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Naveen. All rights reserved.</div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="main.js"></script>
+<script>
+  initFilters('filters', 'portfolioGrid');
+</script>
+</body>
+</html>

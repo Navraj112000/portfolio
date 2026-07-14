@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Naveen, UI/UX Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">PortFolio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+    </div>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-solid" style="padding:11px 24px;font-size:14px;">Connect</a>
+      <button class="burger" id="burgerBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
+    <div class="eyebrow">Services</div>
+    <h1>What I can take off your plate — from first sketch to shipped screen.</h1>
+    <p class="lead">Every engagement starts with the problem, not the deliverable. Below is how that usually breaks down.</p>
+  </div>
+</section>
+
+<section class="services" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<section class="process-strip">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="justify-content:center;display:flex;">How It Works</div>
+      <h2 class="section-title">My Process</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step"><div class="step-num">01 — Discover</div><h5>Understand the problem</h5><p>Stakeholder interviews, competitor teardown, and a look at whatever data already exists.</p></div>
+      <div class="process-step"><div class="step-num">02 — Define</div><h5>Frame what to build</h5><p>Turn research into a clear brief: what we're solving, for whom, and how we'll know it worked.</p></div>
+      <div class="process-step"><div class="step-num">03 — Design</div><h5>Wireframe to high-fidelity</h5><p>Structure first, then visual system — moving from low-fidelity flows to polished, dev-ready screens.</p></div>
+      <div class="process-step"><div class="step-num">04 — Deliver</div><h5>Handoff &amp; support</h5><p>Specs, component libraries, and QA support through to launch — not a file dump at the end.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="justify-content:center;display:flex;">Questions</div>
+      <h2 class="section-title">Frequently Asked</h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="faq-item">
+        <div class="faq-q">How long does a typical project take? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Most engagements run 4–10 weeks depending on scope — a landing page redesign sits at the shorter end, a full product design system at the longer end.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you also build the front-end? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes, for HTML/CSS/JS and React builds. For larger engineering efforts I design to spec and work closely with your dev team through QA.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What do you need from me to get started? <span class="plus">+</span></div>
+        <div class="faq-a"><p>A short brief on the problem you're solving, access to any existing analytics or user feedback, and one point of contact for decisions.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you work with an existing design system? <span class="plus">+</span></div>
+        <div class="faq-a"><p>Absolutely — I'll audit what exists first and extend it rather than starting over, unless a rebuild is genuinely the right call.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" style="padding-top:0;padding-bottom:80px;">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-title" style="margin-bottom:20px;">Have a project in mind?</h2>
+    <p style="color:var(--text-dim);max-width:480px;margin:0 auto 30px;">Let's talk through what you're building and whether it's a fit.</p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <a href="index.html#contact" class="btn btn-solid">Let's Talk</a>
+      <a href="projects.html" class="btn btn-outline">See My Work</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">PROTOFOLIO.</div>
+      <p class="footer-quote">"Seeking me to continually enhance my portfolio in the future. Open to collaborative opportunities that align with my professional endeavors."</p>
+    </div>
+    <div class="footer-contact">
+      <h6>Contact</h6>
+      <p><a href="tel:+918440090525">+91 8440090525</a></p>
+      <p><a href="mailto:naveensinghchouhan2000@gmail.com">naveensinghchouhan2000@gmail.com</a></p>
+      <p>Jaipur, Rajasthan, India</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Naveen. All rights reserved.</div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="main.js"></script>
+<script>
+  renderServices('servicesGrid', true);
+  initFaq();
+</script>
+</body>
+</html>

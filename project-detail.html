@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Project — Naveen, UI/UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="wrap">
+        <a href="index.html" class="logo">PortFolio</a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+        </div>
+        <div class="nav-cta">
+          <a
+            href="index.html#contact"
+            class="btn btn-solid"
+            style="padding: 11px 24px; font-size: 14px"
+            >Connect</a
+          >
+          <button class="burger" id="burgerBtn" aria-label="Toggle menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="caseContent"><!-- populated by JS --></div>
+
+    <footer id="contact">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">PROTOFOLIO.</div>
+          <p class="footer-quote">
+            "Seeking me to continually enhance my portfolio in the future. Open
+            to collaborative opportunities that align with my professional
+            endeavors."
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h6>Contact</h6>
+          <p><a href="tel:+918440090525">+91 8440090525</a></p>
+          <p>
+            <a href="mailto:naveensinghchouhan2000@gmail.com"
+              >naveensinghchouhan2000@gmail.com</a
+            >
+          </p>
+          <p>Jaipur, Rajasthan, India</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">© 2026 Naveen. All rights reserved.</div>
+    </footer>
+
+    <script src="projects-data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      function getParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
+      }
+
+      function renderCaseStudy() {
+        const id = getParam("id") || PROJECTS[0].id;
+        const p = PROJECTS.find((x) => x.id === id) || PROJECTS[0];
+        const idx = PROJECTS.findIndex((x) => x.id === p.id);
+        const prev = PROJECTS[(idx - 1 + PROJECTS.length) % PROJECTS.length];
+        const next = PROJECTS[(idx + 1) % PROJECTS.length];
+
+        document.title = p.title + " — Case Study";
+        document.getElementById("pageTitle").textContent =
+          p.title + " — Case Study";
+
+        const techGroupsHTML = Object.keys(p.tech)
+          .map(
+            (group) => `
+      <div class="tech-group">
+        <h6>${group}</h6>
+        <div class="tech-pills">
+          ${p.tech[group].map((t) => `<span class="tech-pill">${t}</span>`).join("")}
+        </div>
+      </div>
+    `,
+          )
+          .join("");
+
+        const galleryHTML = [1, 2, 3, 4]
+          .map(
+            (n) => `
+      <div class="gallery-tile">
+        <img src="images/${p.id}/gallery-${n}.jpg" alt="${p.title} screen ${n}" onerror="this.style.display='none'">
+        
+      </div>
+    `,
+          )
+          .join("");
+
+        const html = `
+      <section class="page-hero case-hero">
+        <div class="wrap">
+          <div class="breadcrumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / ${p.title.split("—")[0].trim()}</div>
+          <div class="eyebrow">${p.cat}</div>
+          <h1>${p.title}</h1>
+          <p class="lead">${p.summary}</p>
+
+          <div class="case-meta-grid">
+            <div><div class="m-label">Client</div><div class="m-value">${p.client}</div></div>
+            <div><div class="m-label">Role</div><div class="m-value">${p.role}</div></div>
+            <div><div class="m-label">Duration</div><div class="m-value">${p.duration}</div></div>
+            <div><div class="m-label">Year</div><div class="m-value">${p.year}</div></div>
+          </div>
+
+          <div class="case-banner" style="background:${p.bannerColor}">
+            <img src="images/${p.id}/banner.jpg" alt="${p.title} banner" onerror="this.style.display='none'">
+          
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="case-two-col">
+            <div>
+              <h3>Overview</h3>
+              <p class="body-text">${p.overview}</p>
+            </div>
+            <div>
+              <h3>The Problem</h3>
+              <p class="body-text">${p.problem}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Brand &amp; Color</div>
+          <h3>Color Branding</h3>
+          <p class="body-text">The palette below was chosen to carry the brand's personality consistently from the marketing site through to product UI.</p>
+          <div class="palette-row">
+            ${p.colors
+              .map(
+                (c) => `
+              <div class="swatch">
+                <div class="chip" style="background:${c.hex}"></div>
+                <div class="meta"><div class="name">${c.name}</div><div class="hex">${c.hex}</div></div>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Discovery</div>
+          <h3>User Research</h3>
+          <p class="body-text">Before any screens were designed, here's how we validated the problem was real and understood who we were solving it for.</p>
+          <div class="research-grid">
+            ${p.research
+              .map(
+                (r) => `
+              <div class="research-card">
+                <div class="r-icon">${r.icon}</div>
+                <h5>${r.title}</h5>
+                <p>${r.desc}</p>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Approach</div>
+          <h3>Design Process</h3>
+          <div class="process-timeline">
+            ${p.process
+              .map(
+                (step, i) => `
+              <div class="pt-item">
+                <div class="pt-dot">0${i + 1}</div>
+                <div><h5>${step.title}</h5><p>${step.desc}</p></div>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Under The Hood</div>
+          <h3>Technologies Used</h3>
+          <div class="tech-groups">${techGroupsHTML}</div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Impact</div>
+          <h3>Results</h3>
+          <div class="results-grid">
+            ${p.results
+              .map(
+                (r) => `
+              <div class="result-card"><div class="r-num">${r.num}</div><div class="r-label">${r.label}</div></div>
+            `,
+              )
+              .join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="eyebrow">Gallery</div>
+          <h3>Selected Screens</h3>
+          <div class="gallery-grid">${galleryHTML}</div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="wrap">
+          <div class="testimonial-block">
+            <p>"${p.testimonial.quote}"</p>
+            <div class="who">${p.testimonial.who}</div>
+            <div class="role">${p.testimonial.role}</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap case-nav">
+          <a href="project-detail.html?id=${prev.id}" class="prev">
+            <div class="dir">← Previous Project</div>
+            <div class="title">${prev.title.split("—")[0].trim()}</div>
+          </a>
+          <a href="project-detail.html?id=${next.id}" class="next">
+            <div class="dir">Next Project →</div>
+            <div class="title">${next.title.split("—")[0].trim()}</div>
+          </a>
+        </div>
+      </section>
+    `;
+        document.getElementById("caseContent").innerHTML = html;
+      }
+
+      renderCaseStudy();
+    </script>
+  </body>
+</html>

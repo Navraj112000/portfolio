@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen-UI/UX Designer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="wrap">
+        <a href="index.html" class="logo">PortFolio</a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+        </div>
+        <div class="nav-cta">
+          <a
+            href="index.html#contact"
+            class="btn btn-solid"
+            style="padding: 11px 24px; font-size: 14px"
+            >Connect</a
+          >
+          <button class="burger" id="burgerBtn" aria-label="Toggle menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badge">
+            <span class="dot"></span> Available for Opportunity
+          </div>
+          <h1>
+            Hey, I'm Naveen,<br />UI/UX Designer<br /><span class="accent"
+              >Based in India.</span
+            >
+          </h1>
+          <p class="lead">
+            Building professional, user-friendly design that supports
+            functionality and boosts user engagement.
+          </p>
+          <div class="hero-actions">
+            <a href="index.html#contact" class="btn btn-solid">Let's Talk</a>
+            <a href="projects.html" class="btn btn-outline">Explore My Work</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="blob"></div>
+          <div class="photo-card">
+            <img src="./Assets/SelfImage.png" alt="" />
+            <!-- <svg
+              class="avatar-svg"
+              viewBox="0 0 320 420"
+              preserveAspectRatio="xMidYMax slice"
+            >
+              <circle cx="160" cy="150" r="70" fill="#3f4260" />
+              <path
+                d="M40 420 C40 300 100 250 160 250 C220 250 280 300 280 420 Z"
+                fill="#454866"
+              />
+            </svg> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-strip">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo">
+          <div class="blob"></div>
+          <div class="photo-cardabout">
+            <svg
+              class="avatar-svg"
+              viewBox="0 0 300 400"
+              preserveAspectRatio="xMidYMax slice"
+            >
+              <circle cx="150" cy="145" r="65" fill="#3f4260" />
+              <path
+                d="M35 400 C35 285 90 240 150 240 C210 240 265 285 265 400 Z"
+                fill="#454866"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">About Me</div>
+          <h3>I'm a Professional UI/UX Designer With 4+ years of Experience</h3>
+          <p>
+            I design digital products that balance clarity with character —
+            interfaces that are easy to use and hold together as a system. My
+            process starts with the problem, not the pixels, and every screen I
+            ship is meant to move a real metric: activation, retention, or
+            trust.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap">
+            <a href="about.html" class="btn btn-ghost-dark">More About Me</a>
+            <a href="../files/Assets/DesignerResume.pdf" class="btn btn-outline"
+              >Download CV</a
+            >
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="num">4+</div>
+              <div class="label">Year Of Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">50+</div>
+              <div class="label">Project Contribution</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">100%</div>
+              <div class="label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow" style="justify-content: center; display: flex">
+            Services
+          </div>
+          <h2 class="section-title">My Speciality</h2>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+        <div style="text-align: center; margin-top: 40px">
+          <a href="services.html" class="btn btn-outline">See All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow" style="justify-content: center; display: flex">
+            Portfolio
+          </div>
+          <h2 class="section-title">Project That Reflect My Work</h2>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+        <div class="portfolio-cta">
+          <a href="index.html#contact" class="btn btn-solid">Let's Talk</a>
+          <a href="projects.html" class="btn btn-outline"
+            >Explore More Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="tools">
+      <div class="wrap tools-inner">
+        <div>
+          <div class="eyebrow">Tools &amp; Technologies</div>
+          <h2 class="section-title" style="margin-bottom: 36px">
+            Skill You can count on..
+          </h2>
+          <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+        <div class="challenge-copy">
+          <h3>
+            Challenge Me<br />With More<br />And
+            <span class="accent">Number<br />Increase</span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">PROTOFOLIO.</div>
+          <p class="footer-quote">
+            "Seeking me to continually enhance my portfolio in the future. Open
+            to collaborative opportunities that align with my professional
+            endeavors."
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h6>Contact</h6>
+          <p><a href="tel:+918440090525">+91 8440090525</a></p>
+          <p>
+            <a href="mailto:naveensinghchouhan2000@gmail.com"
+              >naveensinghchouhan2000@gmail.com</a
+            >
+          </p>
+          <p>Jaipur, Rajasthan, India</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">© 2026 Naveen. All rights reserved.</div>
+    </footer>
+
+    <script src="projects-data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      renderServices("servicesGrid", false);
+      initFilters("filters", "portfolioGrid");
+      renderTools("toolsGrid");
+    </script>
+  </body>
+</html>
