@@ -831,6 +831,9 @@ nav.wrap {
   position: relative;
   overflow: hidden;
 }
+.case-banner img{
+  background-size: cover;
+}
 .case-section {
   padding: 0 0 80px;
 }
