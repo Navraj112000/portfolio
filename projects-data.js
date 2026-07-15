@@ -318,7 +318,7 @@ const PROJECTS = [
     role: "Lead Product Designer",
     duration: "7 weeks",
     liveLabel: "View Live Product",
-    thumbColor: "linear-gradient(135deg,#2c2f45,#111327)",
+    thumbColor: "#261F0E",
     bannerColor: "linear-gradient(135deg,#2c2f45 0%,#08090f 100%)",
     summary:
       "One QR, one scan, complete control — a contactless menu and ordering platform for restaurants, from scan to checkout.",
@@ -466,7 +466,7 @@ const PROJECTS = [
     role: "Graphic Designer",
     duration: "Ongoing",
     liveLabel: "View Gallery",
-    thumbColor: "#005CA9",
+    thumbColor: "#FFFFFF",
     bannerColor: "linear-gradient(135deg,#7a2d5a 0%,#1f0f1a 100%)",
     summary:
       "A recurring series of social media graphics supporting DZONE's course launches and community engagement across Instagram and LinkedIn.",
