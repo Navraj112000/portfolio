@@ -396,7 +396,7 @@ const PROJECTS = [
     duration: "Ongoing",
     liveLabel: "View Gallery",
     thumbColor: "linear-gradient(135deg,#c94b6b,#7a2d5a)",
-    bannerColor: "linear-gradient(135deg,#c94b6b 0%,#3a1830 100%)",
+    bannerColor: "#04343D",
     summary:
       "A set of promotional web banners for DZONE's course launches, built as a reusable template system for fast turnaround.",
     overview:
