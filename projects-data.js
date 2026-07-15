@@ -87,7 +87,7 @@ const PROJECTS = [
     role: "Product Designer",
     duration: "8 weeks",
     liveLabel: "View Case Study Deck",
-    thumbColor: "linear-gradient(135deg,#5fb8c9,#2a6f7d)",
+    thumbColor: "#000",
     bannerColor: "linear-gradient(135deg,#5fb8c9 0%,#123b42 100%)",
     summary:
       "An internal HR portal where employees manage leave, payslips, and announcements in one calm, low-friction dashboard.",
@@ -164,7 +164,7 @@ const PROJECTS = [
     role: "UI/UX Designer + Front-end Developer",
     duration: "5 weeks",
     liveLabel: "View Live Site",
-    thumbColor: "linear-gradient(135deg,#c94b6b,#7a2d5a)",
+    thumbColor: "#11260B",
     bannerColor: "linear-gradient(135deg,#7a2d5a 0%,#231020 100%)",
     summary:
       "A patient-facing website for a nutrition and healthcare clinic, designed to build trust and make appointment booking effortless.",
@@ -241,7 +241,7 @@ const PROJECTS = [
     role: "Product Designer",
     duration: "10 weeks",
     liveLabel: "View Prototype",
-    thumbColor: "linear-gradient(135deg,#5b3fc9,#7a2d9e)",
+    thumbColor: "#243C59",
     bannerColor: "linear-gradient(135deg,#5b3fc9 0%,#1a1032 100%)",
     summary:
       "A technical dashboard for managing domains, DNS records, and SSL certificates — built for engineers, not consumers.",
@@ -466,7 +466,7 @@ const PROJECTS = [
     role: "Graphic Designer",
     duration: "Ongoing",
     liveLabel: "View Gallery",
-    thumbColor: "linear-gradient(135deg,#c94b6b,#7a2d5a)",
+    thumbColor: "#005CA9",
     bannerColor: "linear-gradient(135deg,#7a2d5a 0%,#1f0f1a 100%)",
     summary:
       "A recurring series of social media graphics supporting DZONE's course launches and community engagement across Instagram and LinkedIn.",
